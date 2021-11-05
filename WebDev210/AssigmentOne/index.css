@@ -5,11 +5,17 @@
     padding-right:5%;
 
 }
+
+.linkcolour{
+    color: #975ef3;
+}
+
 .pageBody{
     background-color: #212225;
     padding-top: 1%;
     padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: 1%;
 }
 
 .pageDivider{
@@ -50,17 +56,43 @@
 }
 
 .navbar{
-    width: 100%;
-    height: 25px;
-    background-color: #6200FF;
-    border-radius: 24px;
+    font-size: 96px;
+    text-align: center;
 }
 
-.navlist{
+.contactbody{
+    font-size: 24px;
+}
+
+.contactlist{
     list-style-type: none;
+}
+
+.contactlistitem::before{
+
+    content: "\2022";
+    color: #975ef3;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    font-size: 24px;
 }
 
 .navlist > li{
     display: inline;
     color: #975ef3;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.underconstion{
+    font-size: 48px;
+    text-align: center;
+}
+
+.iconfont{
+    font-size: 96px;
 }
