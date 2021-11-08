@@ -7,27 +7,68 @@
     <meta name="description" value="Hey dummies!" />
     <link rel="icon" href="../media/gator.png" />
     <link rel="stylesheet" href="./index.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/333efb0c4e.js" crossorigin="anonymous"></script>
-    <title>Travel Experts</title>
+    <title>Travel Experts - Register</title>
 </head>
 <body class="container">
-    <div class="pageBody">
-        <div class="contentseparator">
+    <article class="pageBody">
+        <header class="contentseparator">
             <img src="../media/gator.png" alt="Gator Pic" class="titleimage">
             <h1 class="titletext">Welcome to Gator Travel Experts</h1>
-        </div>
+        </header>
         <hr class="pageDivider" />
-        <div class="underconstion">
-            <h2>
-                This page is currently under construction!
-            </h2>
-            <i class="fas fa-wrench iconfont"></i>
-        </div>
-        <div class="contentseparator">
-            <hr class="pageDivider" />
-                <div class="navbar">
-                    <a href="index.html" class="linkcolour"><i class="fas fa-home iconfont"></i></a>
+        <section class="contentseparator">
+            <form method="get" action="./scripts/bouncer.php">
+                <div class="registercontent">
+                    <label for="fname">First Name</label> 
+                    <br />
+                    <input type="text" name="fname" placeholder="First Name" class="registerinput" />
+                    <br />
+                    <label for="lname">Last Name</label>
+                    <br />
+                    <input type="text" name="lname" placeholder="Last Name" class="registerinput" />
+                    <br />
+                    <label for="birthday">Date of Birth</label>
+                    <br />
+                    <input type="date" name="birthday" class="registerinput" />
+                    <br />
+                    <label for="password">Password</label>
+                    <br />
+                    <input type="password" name="password" class="registerinput" />
+                    <br />
+                    <label for="cpassword">Confirm Password</label>
+                    <br />
+                    <input type="password" name="cpassword" class="registerinput" />
+                    <br />
+                    <label for="email">Email</label>
+                    <br />
+                    <input type="email" name="email" placeholder="example@domain.ca" class="registerinput" />
+                    <br />
+                    <label for="isfamily">Are you a family?</label>
+                    <br />
+                    <input type="checkbox" name="isfamily" value="Yes" class="test" />
+                    <br />
+                    <label for="vacation">Describe your ideal vacation</label>
+                    <br />
+                    <textarea name="vacation" rows="4" cols="50" placeholder="Describe your ideal vacation to help our agents draw up your perfect vacation!"></textarea>
+                    <br />
+                    <input type="submit" value="Send" class="formsubmit"/>
+                    <input type="reset" value="Clear" class="formsubmit"/>
                 </div>
-        </div>
+            </form>
+        </section>
+        <hr class="pageDivider" />
+        <nav class="contentseparator">
+            <div class="navbar">
+                <a href="index.html" class="linkcolour"><i class="fas fa-home iconfont"></i></a>
+            </div>
+        </nav>
+        <footer>
+            <div class="contentseparator copyright">Copyright Gator Inc. &copy</div>
+        </footer>
+    </article>
 </body>
 </html>

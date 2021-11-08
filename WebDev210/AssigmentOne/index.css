@@ -3,6 +3,7 @@
     color: white;
     padding-left:5%;
     padding-right:5%;
+    font-family: 'Mohave', sans-serif;
 
 }
 
@@ -16,6 +17,7 @@
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 1%;
+    border-radius: 10px;
 }
 
 .pageDivider{
@@ -88,11 +90,40 @@
     text-align: center;
 }
 
-.underconstion{
-    font-size: 48px;
-    text-align: center;
-}
-
 .iconfont{
     font-size: 96px;
+}
+
+.registercontent{
+    margin-left: 5%;
+}
+
+.registercontent > label{
+    font-size: 24px;
+}
+
+.registercontent > textarea{
+    font-size: 24px;
+    border-radius: 5px;
+    border-color: #6200FF;
+    border-width: 5px;
+}
+
+.registerinput{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    border-radius: 5px;
+    border-color: #6200FF;
+    border-width: 5px;
+    width: 390px;
+}
+
+.formsubmit{
+    font-size: 20px;
+    margin-top: 20px;
+    width: 195px;
+    border-radius: 5px;
+    border-color: #6200FF;
+    border-width: 5px;
 }
