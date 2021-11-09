@@ -21,7 +21,7 @@
         </header>
         <hr class="pageDivider" />
         <section class="contentseparator">
-            <form method="get" action="./scripts/bouncer.php">
+            <form method="post" action="./scripts/bouncer.php">
                 <div class="registercontent">
                     <label for="fname">First Name</label> 
                     <br />
@@ -47,6 +47,27 @@
                     <br />
                     <input type="email" name="email" placeholder="example@domain.ca" class="registerinput" />
                     <br />
+                    <label for="city">City - We use this information to gauge flight costs and sales tax to maximize trip value!</label>
+                    <br />
+                    <input type="text" name="city" placeholder="City" class="registerinput" />
+                    <br />
+                    <label for="province">Province</label>
+                    <br />
+                    <select name="province" class="registerinput" >
+                        <option>Select Province/State</option>
+                        <option>AB</option>
+                        <option>SK</option>
+                        <option>CA</option>
+                    </select>
+                    <br />
+                    <label for="country">Country</label>
+                    <br />
+                    <select name="country" class="registerinput" >
+                        <option>Select Country</option>
+                        <option>CA</option>
+                        <option>US</option>
+                    </select>
+                    <br />
                     <label for="isfamily">Are you a family?</label>
                     <br />
                     <input type="checkbox" name="isfamily" value="Yes" class="test" />
@@ -55,8 +76,8 @@
                     <br />
                     <textarea name="vacation" rows="4" cols="50" placeholder="Describe your ideal vacation to help our agents draw up your perfect vacation!"></textarea>
                     <br />
-                    <input type="submit" value="Send" class="formsubmit"/>
-                    <input type="reset" value="Clear" class="formsubmit"/>
+                    <input type="submit" value="Send" class="formsubmit" />
+                    <input type="reset" value="Clear" class="formsubmit" />
                 </div>
             </form>
         </section>
