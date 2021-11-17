@@ -1,83 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" value="Hey dummies!" />
-    <link rel="icon" href="../media/gator.png" />
+    <link rel="icon" href="./media/gator.png" />
     <link rel="stylesheet" href="./index.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/333efb0c4e.js" crossorigin="anonymous"></script>
+    <script src="./scripts/readform.js"></script>
+    <script>
+        function revealDescription(id){
+            document.getElementById(id).style.visibility = 'visible'
+            }
+        function hideDescription(id){
+            document.getElementById(id).style.visibility = "hidden"
+        }
+    </script>
     <title>Travel Experts - Register</title>
 </head>
-<body class="container">
+<body id="body" class="container">
     <article class="pageBody">
         <header class="contentseparator">
-            <img src="../media/gator.png" alt="Gator Pic" class="titleimage">
+            <img src="./media/gator.png" alt="Gator Pic" class="titleimage">
             <h1 class="titletext">Welcome to Gator Travel Experts</h1>
         </header>
         <hr class="pageDivider" />
         <section class="contentseparator">
-            <form method="post" action="./scripts/bouncer.php">
-                <div class="registercontent">
+            <form id="registerform" method="post" action="./scripts/bouncer.php">
+                <div id="registerForm" class="registercontent">
                     <label for="fname">First Name</label> 
                     <br />
-                    <input type="text" name="fname" placeholder="First Name" class="registerinput" />
+                    <input type="text" name="fname" onfocus="revealDescription('firstname')" onblur="hideDescription('firstname')" placeholder="First Name" class="registerinput" />
+                    <span id="firstname" style="visibility: hidden;">Customer Firstname</span>
                     <br />
                     <label for="lname">Last Name</label>
                     <br />
-                    <input type="text" name="lname" placeholder="Last Name" class="registerinput" />
+                    <input type="text" name="lname" onfocus="revealDescription('lastname')" onblur="hideDescription('lastname')" placeholder="Last Name" class="registerinput" />
+                    <span id="lastname" style="visibility: hidden;">Customer Lastname</span>
                     <br />
                     <label for="birthday">Date of Birth</label>
                     <br />
-                    <input type="date" name="birthday" class="registerinput" />
+                    <input type="date" name="birthday" onfocus="revealDescription('birthday')" onblur="hideDescription('birthday')" class="registerinput" />
+                    <span id="birthday" style="visibility: hidden;">Customer Date of Birth</span>
                     <br />
                     <label for="password">Password</label>
                     <br />
-                    <input type="password" name="password" class="registerinput" />
+                    <input type="password" name="password" onfocus="revealDescription('password')" onblur="hideDescription('password')" class="registerinput" />
+                    <span id="password" style="visibility: hidden;">Create a secure account password</span>
                     <br />
                     <label for="cpassword">Confirm Password</label>
                     <br />
-                    <input type="password" name="cpassword" class="registerinput" />
+                    <input type="password" name="cpassword" onfocus="revealDescription('cpassword')" onblur="hideDescription('cpassword')" class="registerinput" />
+                    <span id="cpassword" style="visibility: hidden;">Password and Confirm Password must match</span>
                     <br />
                     <label for="email">Email</label>
                     <br />
-                    <input type="email" name="email" placeholder="example@domain.ca" class="registerinput" />
+                    <input type="email" name="email" onfocus="revealDescription('email')" onblur="hideDescription('email')" placeholder="example@domain.ca" class="registerinput" />
+                    <span id="email" style="visibility: hidden;">Add an email for account management</span>
                     <br />
-                    <label for="city">City - We use this information to gauge flight costs and sales tax to maximize trip value!</label>
+                    <label for="phone">Phone Number</label>
                     <br />
-                    <input type="text" name="city" placeholder="City" class="registerinput" />
+                    <input type="text" name="phonenumber" onfocus="revealDescription('phone')" onblur="hideDescription('phone')" placeholder="403-555-5555" class="registerinput" />
+                    <span id="phone" style="visibility: hidden;">Add a phone number for contact</span>
+                    <br />
+                    <label for="city">City </label>
+                    <span>- We use this information to gauge flight costs and sales tax to maximize trip value!</span>
+                    <br />
+                    <input type="text" name="city" onfocus="revealDescription('city')" onblur="hideDescription('city')" placeholder="City" class="registerinput" />
+                    <span id="city" style="visibility: hidden;">Customer City</span>
                     <br />
                     <label for="province">Province</label>
                     <br />
-                    <select name="province" class="registerinput" >
-                        <option>Select Province/State</option>
+                    <select name="province" onfocus="revealDescription('province')" onblur="hideDescription('province')" class="registerinput" >
+                        <option></option>
                         <option>AB</option>
                         <option>SK</option>
                         <option>CA</option>
                     </select>
+                    <span id="province" style="visibility: hidden;">Customer Province</span>
                     <br />
                     <label for="country">Country</label>
                     <br />
-                    <select name="country" class="registerinput" >
-                        <option>Select Country</option>
+                    <select name="country" onfocus="revealDescription('country')" onblur="hideDescription('country')" class="registerinput" >
+                        <option></option>
                         <option>CA</option>
                         <option>US</option>
                     </select>
+                    <span id="country" style="visibility: hidden;">Customer Country</span>
                     <br />
-                    <label for="isfamily">Are you a family?</label>
+                    <label for="postalcode">Postal Code/Zip Code</label>
                     <br />
-                    <input type="checkbox" name="isfamily" value="Yes" class="test" />
+                    <input type="text" name="postalcode" onfocus="revealDescription('postal')" onblur="hideDescription('postal')" placeholder="Q1Q 1Q1/55555-4444" class="registerinput" />
+                    <span id="postal" style="visibility: hidden;">Customer Postal Code/Zip Code</span>
                     <br />
                     <label for="vacation">Describe your ideal vacation</label>
                     <br />
                     <textarea name="vacation" rows="4" cols="50" placeholder="Describe your ideal vacation to help our agents draw up your perfect vacation!"></textarea>
                     <br />
-                    <input type="submit" value="Send" class="formsubmit" />
-                    <input type="reset" value="Clear" class="formsubmit" />
+                    <input type="submit" value="Send" class="formsubmit" onclick="return validate()" />
+                    <input type="reset" value="Clear" class="formsubmit" onclick="return confirm('Are you sure you want clear all values from all fields?')" />
                 </div>
             </form>
         </section>

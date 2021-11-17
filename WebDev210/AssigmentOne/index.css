@@ -126,7 +126,7 @@
     border-color: var(--purple);
     border-width: 5px;
     width: 50%;
-    min-width: 150px;
+    min-width: 300px;
 }
 
 .registerinput{
@@ -138,7 +138,7 @@
     border-color: var(--purple);
     border-width: 5px;
     width: 25%;
-    min-width: 150px;
+    min-width: 300px;
 }
 
 .formsubmit{
