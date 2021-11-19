@@ -1,0 +1,197 @@
+/*
+ Daniel Palmer
+ Web Application Development (CPRG-210-A
+ Assignemt 1 - 7
+ 2021-11-17
+*/
+
+:root{
+    --purple: #6200FF;
+    --accentPurple: #5620DC;
+    --gray: #212225;
+    --accentGray : #37383B;
+    --terPurple: #975ef3;
+}
+.container{
+    background-color: #000000;
+    background-image: url(../../../media/geobg.png);
+    background-repeat: repeat-y;
+    color: white;
+    padding-left:5%;
+    font-family: 'Mohave', sans-serif;
+    font-size: 24px;
+
+}
+
+.linkcolour{
+    color: var(--terPurple);
+}
+
+.pageBody{
+    background-color: var(--gray);
+    background-image: url(../../../media/geofg1.png);
+    background-position: right top;
+    background-repeat: repeat-y;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    border-radius: 10px;
+}
+
+.pageDivider{
+    border-color: var(--purple);
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 25px;
+}
+
+.contentseparator{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.sectionpostion{
+    padding-left: 25px;
+}
+
+.titletext{
+    display: inline-block;
+    position: absolute;
+    color: white;
+    padding: 25px;
+    font-size: 30px;
+}
+
+.titleimage{
+    border-radius: 20px;
+}
+
+.notfound{
+    text-align: center;
+    font-size: 36px;
+}
+
+.imageresize{
+    height: 100px;
+    width: 300px;
+    border-radius: 15px;
+}
+
+.displayphototext{
+    display: inline-block;
+    position: absolute;
+    color: white;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+.navbar{
+    font-size: 96px;
+    text-align: center;
+}
+
+.contactbody{
+    font-size: 24px;
+}
+
+.contactlist{
+    list-style-type: none;
+}
+
+.contactlistitem::before{
+
+    content: "\2022";
+    color: #975ef3;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    font-size: 24px;
+}
+
+.navlist > li{
+    display: inline;
+    color: #975ef3;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.iconfont{
+    font-size: 96px;
+}
+
+.registercontent{
+    margin-left: 5%;
+}
+
+.registercontent > label{
+    font-size: 24px;
+}
+
+.registercontent > textarea{
+    font-size: 24px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--purple);
+    border-width: 5px;
+    width: 50%;
+    min-width: 300px;
+}
+
+.registerinput{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--purple);
+    border-width: 5px;
+    width: 25%;
+    min-width: 300px;
+}
+
+.formsubmit{
+    font-size: 20px;
+    margin-top: 20px;
+    width: 195px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--purple);
+    border-width: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    .titletext{
+        display: block;
+        position: static;
+        color: white;
+        padding: 25px;
+        font-size: 30px;
+    }
+
+    .titleimage{
+        border-radius: 20px;
+        margin-left: 5%;
+        width: 90%;
+        height: auto;
+    }
+
+    .displayphototext{
+        display: block;
+        position: static;
+        color: white;
+        padding-top: 10px;
+        padding-left: 25px;
+    }
+
+    .imageresize{
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+        border-radius: 15px;
+    }
+    
+}
