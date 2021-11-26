@@ -1,6 +1,9 @@
 /Web Dev 210/media
 WebDev210/media/
 WebDev210/AssignmentTwo/sait-node/node_modules
-WebDev210/AssignmentTwo/sait-node/package-lock.json
+WebDev210/AssignmentTwo/sait-mongo/node_modules
+WebDev210/AssignmentTwo/sait-mysql/node_modules
+WebDev210/AssignmentTwo/sait-express/node_modules
+WebDev210/AssignmentDay7-13/node_modules
 /Assignments
 WebDev210/AssignmentTwo/sait-node/media/

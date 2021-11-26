@@ -1,8 +1,8 @@
-const builtins = require("module").builtinModules
+const builtins = require("module").builtinModules;
 
 
 function message(message){
-    console.log(message)
+    console.log(message);
 }
 
-message(builtins[0])
+message(builtins[0]);

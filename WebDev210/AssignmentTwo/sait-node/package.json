@@ -1,0 +1,17 @@
+{
+  "name": "gatorinc",
+  "version": "0.1.0",
+  "description": "Gator Travel Inc Website",
+  "main": "app.js",
+  "dependencies": {
+    "dayjs": "^1.10.7",
+    "node": "^17.1.0",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon start"
+  },
+  "author": "Special-Sharpie",
+  "license": "ISC"
+}

@@ -1,7 +1,8 @@
 <!-- Daniel Palmer -->
-<!-- Web Application Development (CPRG-210-A -->
-<!-- Assignemt 1 - 7 -->
-<!-- 2021-11-17 -->
+<!-- Web Application Development (CPRG-210-A) -->
+<!-- Assignemt 8 - 13 -->
+<!-- 2021-11-26 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,16 +10,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" value="Hey dummies!" />
-    <link rel="icon" href="../media/gator.png" />
-    <link rel="stylesheet" href="../Styles/index.css"/>
+    <link rel="icon" href="gator.png" />
+    <link rel="stylesheet" type="text/css" href="index.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap" rel="stylesheet" />
-    <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="https://kit.fontawesome.com/333efb0c4e.js" crossorigin="anonymous"></script>
-    <script src="../scripts/readform.js"></script>
+    <script src="readform.js"></script>
     <script>
-        $(document).ready(console.log("live"))
+        // $(document).ready(console.log("live"))
         function revealDescription(id){
             document.getElementById(id).style.visibility = 'visible'
             }
@@ -30,13 +30,9 @@
 </head>
 <body id="body" class="container">
     <article class="pageBody">
-        <header class="contentseparator">
-            <img src="../media/gator.png" alt="Gator Pic" class="titleimage">
-            <h1 class="titletext">Welcome to Gator Travel Experts</h1>
-        </header>
-        <hr class="pageDivider" />
+        <%- include('header', {time: time}) %> 
         <section class="contentseparator">
-            <form id="registerform" method="post" action="./scripts/bouncer.php">
+            <form id="registerform" action="/thankyou" method="post">
                 <div id="registerForm" class="registercontent">
                     <label for="fname">First Name</label> 
                     <br />
@@ -73,6 +69,11 @@
                     <input type="text" name="phonenumber" onfocus="revealDescription('phone')" onblur="hideDescription('phone')" placeholder="403-555-5555" class="registerinput" />
                     <span id="phone" style="visibility: hidden;">Add a phone number for contact</span>
                     <br />
+                    <label for="address">Address</label>
+                    <br />
+                    <input type="text" name="address" onfocus="revealDescription('address')" onblur="hideDescription('address')" placeholder="Adress" class="registerinput" />
+                    <span id="address" style="visibility: hidden;">Customer Address</span>
+                    <br />
                     <label for="city">City </label>
                     <span>- We use this information to gauge flight costs and sales tax to maximize trip value!</span>
                     <br />
@@ -107,7 +108,7 @@
                     <br />
                     <textarea name="vacation" rows="4" cols="50" placeholder="Describe your ideal vacation to help our agents draw up your perfect vacation!"></textarea>
                     <br />
-                    <input type="submit" value="Send" class="formsubmit" onclick="return validate()" />
+                    <input type="submit" value="Send" class="formsubmit" onclick="return validate()" href="/thankyou"/>
                     <input type="reset" value="Clear" class="formsubmit" onclick="return confirm('Are you sure you want clear all values from all fields?')" />
                 </div>
             </form>
@@ -115,7 +116,7 @@
         <hr class="pageDivider" />
         <nav class="contentseparator">
             <div class="navbar">
-                <a href="index.html" class="linkcolour"><i class="fas fa-home iconfont"></i></a>
+                <a href="/" class="linkcolour"><i class="fas fa-home iconfont"></i></a>
             </div>
         </nav>
         <footer>
