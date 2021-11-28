@@ -6,6 +6,7 @@
 var postalCheck = /(^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$)|(^\d{5}-\d{4}$)|(^\d{5}$)/
 var phoneCheck = /(^\d{10}$)|(^\(\d{3}\)-\d{3}-\d{4}$)|(^\d{3}-\d{3}-\d{4}$)/
 
+// A simple function for test Regex against a submitted value.
 function checkValue(value, reg){
     if (reg.test(value)){
         return true
@@ -19,12 +20,24 @@ function validate(){
     var form = document.forms[0]
     var filledFields = 0;
     var values = []
+/**
+ * Below interates over all inputs in the forms, incrementing "unfilledFields"
+ * when ever an empty string is found as the input value 
+ */
     for (var i = 0, element; element = elements[i++];) {
         values.push(element.value)
         if (element.value === ""){
             filledFields++
         };
     };
+/**
+ * Below is the form validation.
+ * First confirming all fields are filled
+ * Second verifying the password and confirm password are the same
+ * Third verifies postal code / zip code is formated properly
+ * Forth verifies that the phone number is formated properly
+ * Last, and ALWAYS LAST, the page requests confirmation to submit information server.
+ */
     if (filledFields != 0){
         alert(filledFields + " required fields are missing.")
         return false;
@@ -41,9 +54,6 @@ function validate(){
     }else{
         confirm("Confirm and Submit information?")
         //Removes the "send" and "clear" items from the vales array
-        values.pop(-1)
-        values.pop(-1)
-        console.log(values)
     };
 };
 

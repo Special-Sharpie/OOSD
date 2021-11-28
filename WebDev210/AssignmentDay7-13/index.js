@@ -19,7 +19,7 @@ app.use(express.static("styles"));
 var port = 3000;
 
 app.listen(port,  ()=>{
-    console.log(`Server started on port ${port}`);
+    console.log(`Server started on port ${port}, http://localhost:3000`);
 });
 
 app.set("view engine", "ejs");

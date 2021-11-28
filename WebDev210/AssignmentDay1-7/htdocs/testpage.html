@@ -1,0 +1,45 @@
+<!-- Daniel Palmer -->
+<!-- Web Application Development (CPRG-210-A -->
+<!-- Assignemt 1 - 7 -->
+<!-- 2021-11-17 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p{
+            margin: 0px;
+        }
+    </style>
+    <script>
+        let a, b, c;
+        function randColor(){
+            return Math.round((Math.random() * 255))
+        }
+        function createArray(arr, len){
+            for (i = 0; i <= len; i++){
+                arr.push(i)
+            }
+            return arr
+        }
+        function changeColor(element){
+            a = randColor()
+            b = randColor()
+            c = randColor()
+            element.style.backgroundColor = `rgb(${a}, ${b}, ${c})`
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = []
+        arr = createArray(arr, 100)
+        for (i=0; i < arr.length; i++){
+            document.write("<p onmouseover='changeColor(this)'>"+ arr[i] +"</p>")
+        }
+    </script>
+</body>
+</html>

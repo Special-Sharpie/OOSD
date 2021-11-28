@@ -7,13 +7,14 @@ const con = mysql.createConnection({
     database: "travelexperts"
 });
 
-var request = "AgtFirstName"
+var request = "AgentId"
+var name = "Fred Smith"
+var splitname = name.split(' ')
 
 con.connect((err)=>{
     if (err) throw err;
     console.log("im in!");
-
-    con.query(`select ${request} from agents`, (err, results, fields)=>{
+    con.query(`select ${request} from agents where AgtFirstName='${splitname[0]}' AND AgtLastName = '${splitname[1]}'`, (err, results, fields)=>{
         if (err) throw err;
         console.log(results);
         con.end((err)=>{

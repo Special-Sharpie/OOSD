@@ -1,8 +1,8 @@
 /*
  Daniel Palmer
- Web Application Development (CPRG-210-A)
- Assignemt 8 - 13
- 2021-11-26
+ Web Application Development (CPRG-210-A
+ Assignemt 1 - 7
+ 2021-11-17
 */
 
 :root{
@@ -14,7 +14,7 @@
 }
 .container{
     background-color: #000000;
-    background-image: url(geobg.png);
+    background-image: url(../../../media/geobg.png);
     background-repeat: repeat-y;
     color: white;
     padding-left:5%;
@@ -29,7 +29,7 @@
 
 .pageBody{
     background-color: var(--gray);
-    background-image: url(geofg1.png);
+    background-image: url(../../../media/geofg1.png);
     background-position: right top;
     background-repeat: repeat-y;
     padding-top: 1%;
@@ -162,7 +162,7 @@
     border-color: var(--purple);
     border-width: 5px;
 }
-/* Alters the padding and margin  */
+
 @media screen and (max-width: 800px) {
     .titletext{
         display: block;
@@ -192,9 +192,6 @@
         height: auto;
         margin-left: 5%;
         border-radius: 15px;
-    }
-    .sectionpostion{
-        padding-left: 5px;
     }
     
 }

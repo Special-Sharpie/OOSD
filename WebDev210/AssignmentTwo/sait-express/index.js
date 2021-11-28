@@ -4,6 +4,7 @@ const app = express()
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.static("views", {"extensions":["html", "ejs"]}))
+app.use(express.static("scripts"))
 var port = 3000
 
 var users = [
@@ -24,7 +25,12 @@ app.get("/test", (req, res)=>{
     res.render("ejstest", {people: users})
 })
 
-app.post("/register", (req, res)=>{
+app.get('/register', (req, res)=>{
+    res.render('register')
+});
+
+app.post("/bouncer.php", (req, res)=>{
 //    res.send("Anna, the data was received!")
+    res.write('bouncer')
     res.send(`Hi ${users[req.query.userid]}! The data was received!`)
 })
